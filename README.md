@@ -6,14 +6,14 @@
 
 ## How to Setup Laravel Project
 
-# Prerequisites:
+### Prerequisites:
 
 -   Docker Desktop
 -   WSL2
 -   Composer
 -   Git Bash
 -   Npm
-
+### Steps:
 -   Clone the repository in `git clone https://github.com/marcangelx/ZenSmart-React-Laravel-FullStack-Test.git`
 -   After Cloning run "composer install".
 -   Duplicate `.env.example` and name it as `.env`.
