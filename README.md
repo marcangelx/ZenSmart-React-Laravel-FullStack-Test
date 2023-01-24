@@ -3,7 +3,7 @@
 <div align="center">
     <h3 align="center">ZenSmart-React-Laravel-FullStack-Test</h3>
 </div>
-
+Creating the project in WSL2 is highly recommended for better performance.
 ## How to Setup Laravel Project
 
 ### Prerequisites:
