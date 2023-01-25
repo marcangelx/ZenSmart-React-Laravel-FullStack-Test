@@ -28,8 +28,8 @@ Creating the project in WSL2 is highly recommended for better performance.
 
 | API          | Type   | Response | Description          |
 | ------------ | ------ | -------- | -------------------- |
-| `/api/tally` | `POST` | `Json`   | Increase click count |
-| `/api/tally` | `GET`  | `Json`   | Retrieve click count |
+| `/api/click` | `POST` | `Json`   | Increase click count |
+| `/api/click` | `GET`  | `Json`   | Retrieve click count |
 
 ```json
 {
