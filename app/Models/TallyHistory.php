@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ButtonClick extends Model
+class TallyHistory extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'clicks',
-        'date'
-    ];
+    protected $table = 'tally_history';
+    protected $guarded = ['id'];
 }
