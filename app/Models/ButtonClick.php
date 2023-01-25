@@ -12,4 +12,9 @@ class ButtonClick extends Model
         'clicks',
         'date'
     ];
+
+    public function histories()
+    {
+        return $this->hasMany(TallyHistory::class, 'tally_id', 'id')->latest()->take(5);
+    }
 }

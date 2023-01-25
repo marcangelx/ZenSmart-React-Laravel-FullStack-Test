@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
     const [clicks, setClicks] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
-    const baseURL = "http://localhost/api/tally";
+    const baseURL = "http://localhost/api/click";
 
     useEffect(() => {
         fetchData();

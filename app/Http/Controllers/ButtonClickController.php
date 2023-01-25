@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ButtonClickResource;
 use App\Models\ButtonClick;
 use App\Models\TallyHistory;
 use Carbon\Carbon;
@@ -19,7 +20,7 @@ class ButtonClickController extends Controller
         if (!$clicks) {
             $clicks = new ButtonClick(['clicks' => 0, 'date' => Carbon::now()]);
         }
-        return response()->json($clicks);
+        return new ButtonClickResource($clicks);
     }
 
     public function store()
@@ -38,6 +39,6 @@ class ButtonClickController extends Controller
             'created_at' => Carbon::now(),
         ]);
 
-        return response()->json($clicks);
+        return new ButtonClickResource($clicks);
     }
 }

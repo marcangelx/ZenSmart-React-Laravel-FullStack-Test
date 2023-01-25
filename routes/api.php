@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/tally', [ButtonClickController::class, 'index']);
-Route::post('/tally', [ButtonClickController::class, 'store']);
+Route::get('/click', [ButtonClickController::class, 'index']);
+Route::post('/click', [ButtonClickController::class, 'store']);
