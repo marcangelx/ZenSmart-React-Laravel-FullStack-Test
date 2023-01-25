@@ -14,7 +14,9 @@ Creating the project in WSL2 is highly recommended for better performance.
 -   Composer
 -   Git Bash
 -   Npm
+
 ### Steps:
+
 -   Clone the repository in `git clone https://github.com/marcangelx/ZenSmart-React-Laravel-FullStack-Test.git`
 -   After Cloning run "composer install".
 -   Duplicate `.env.example` and name it as `.env`.
@@ -31,13 +33,36 @@ Creating the project in WSL2 is highly recommended for better performance.
 
 ```json
 {
-    "id": 1,
-    "clicks": 0,
-    "date": "2023-01-24",
-    "created_at": "2023-01-24T12:56:34.000000Z",
-    "updated_at": "2023-01-24T12:56:34.000000Z"
+    "data": {
+        "id": "5",
+        "attributes": {
+            "clicks": 8,
+            "date": "2023-01-25",
+            "history": [
+                {
+                    "count": 8,
+                    "tally_id": 5,
+                    "created_at": "2023-01-25T12:08:56.000000Z"
+                },
+                {
+                    "count": 7,
+                    "tally_id": 5,
+                    "created_at": "2023-01-25T12:08:32.000000Z"
+                },
+                {
+                    "count": 6,
+                    "tally_id": 5,
+                    "created_at": "2023-01-25T12:06:51.000000Z"
+                }
+            ]
+        }
+    }
 }
 ```
+
+## Run PHPunit Test
+
+-   `sail artisan test` or `./vendor/bin/sail artisan test`
 
 ## Notes
 

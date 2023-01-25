@@ -16,6 +16,6 @@ class Click extends Model
 
     public function histories()
     {
-        return $this->hasMany(TallyHistory::class, 'tally_id', 'id')->latest()->take(5);
+        return $this->hasMany(TallyHistory::class, 'tally_id', 'id')->latest()->take(3);
     }
 }

@@ -15,12 +15,9 @@ class TallyHistoryResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
-            'atrributes' => [
-                'count' => $this->count,
-                'tally_id' => $this->tally_id,
-                'created_at' => $this->created_at
-            ]
+            'count' => $this->count,
+            'tally_id' => $this->tally_id,
+            'created_at' => $this->created_at
         ];
     }
 }
