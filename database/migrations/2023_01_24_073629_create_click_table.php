@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('button_clicks', function (Blueprint $table) {
+        Schema::create('click', function (Blueprint $table) {
             $table->id();
             $table->integer('clicks');
             $table->date('date');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('button_clicks');
+        Schema::dropIfExists('click');
     }
 };

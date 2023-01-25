@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ButtonClick extends Model
+class Click extends Model
 {
+    protected $table = 'click';
     use HasFactory;
     protected $fillable = [
         'clicks',

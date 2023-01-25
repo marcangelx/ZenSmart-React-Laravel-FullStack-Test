@@ -18,8 +18,9 @@ return new class extends Migration
             $table->integer('count');
             $table->unsignedBigInteger('tally_id');
             $table->timestamps();
-            $table->foreign('tally_id')->references('id')->on('button_clicks');
+            $table->foreign('tally_id')->references('id')->on('click')->onDelete('cascade');
         });
+
     }
 
     /**

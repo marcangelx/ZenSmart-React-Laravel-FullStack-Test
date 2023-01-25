@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ButtonClickResource extends JsonResource
+class ClickResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,7 +17,7 @@ class ButtonClickResource extends JsonResource
         return [
             'id' => (string)$this->id,
             'attributes' => [
-                'counts' => $this->email,
+                'clicks' => $this->clicks,
                 'date' => $this->date,
                 'history' => TallyHistoryResource::collection($this->histories)
             ]  

@@ -13,7 +13,7 @@ function App() {
         try {
             const response = await fetch(baseURL);
             const data = await response.json();
-            setClicks(data.clicks);
+            setClicks(data.data.attributes.clicks);
         } catch (error) {
             console.error(error);
         }
@@ -27,7 +27,7 @@ function App() {
                 headers: { "Content-Type": "application/json" },
             });
             const data = await response.json();
-            setClicks(data.clicks);
+            setClicks(data.data.attributes.clicks);
             setIsLoading(false);
         } catch (error) {
             console.error(error);

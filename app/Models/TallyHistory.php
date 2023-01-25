@@ -9,10 +9,15 @@ class TallyHistory extends Model
 {
     use HasFactory;
     protected $table = 'tally_history';
-    protected $guarded = ['id'];
+
+    protected $fillable = [
+        'count',
+        'tally_id',
+        'created_at'
+    ];
 
     public function click()
     {
-        return $this->belongsTo(ButtonClick::class);
+        return $this->belongsTo(Click::class);
     }
 }

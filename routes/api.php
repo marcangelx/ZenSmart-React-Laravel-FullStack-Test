@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ButtonClickController;
+use App\Http\Controllers\ClickController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/click', [ButtonClickController::class, 'index']);
-Route::post('/click', [ButtonClickController::class, 'store']);
+Route::get('/click', [ClickController::class, 'index']);
+Route::post('/click', [ClickController::class, 'store']);

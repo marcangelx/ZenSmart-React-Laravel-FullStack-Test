@@ -2,32 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\ButtonClickResource;
-use App\Models\ButtonClick;
+use App\Http\Resources\ClickResource;
+use App\Models\Click;
 use App\Models\TallyHistory;
 use Carbon\Carbon;
 
 
-class ButtonClickController extends Controller
+class ClickController extends Controller
 {
     public function index()
     {
         // Get the current date
         $date = Carbon::now()->toDateString();
-        $clicks = ButtonClick::where('date', $date)->first();
+        $clicks = Click::where('date', $date)->latest()->first();
 
         // If there is no tally for the current date, create a new one with a value of 0
         if (!$clicks) {
-            $clicks = new ButtonClick(['clicks' => 0, 'date' => Carbon::now()]);
+            $clicks = new Click(['clicks' => 0, 'date' => Carbon::now()]);
         }
-        return new ButtonClickResource($clicks);
+        return new ClickResource($clicks);
     }
 
     public function store()
     {
-        $clicks = ButtonClick::latest()->first();
+        $clicks = Click::latest()->first();
         if (!$clicks) {
-            $clicks = new ButtonClick(['clicks' => 0, 'date' => Carbon::now()]);
+            $clicks = new Click(['clicks' => 0, 'date' => Carbon::now()]);
         }
 
         $clicks->clicks++;
@@ -39,6 +39,6 @@ class ButtonClickController extends Controller
             'created_at' => Carbon::now(),
         ]);
 
-        return new ButtonClickResource($clicks);
+        return new ClickResource($clicks);
     }
 }
